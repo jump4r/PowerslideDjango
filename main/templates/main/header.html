@@ -1,0 +1,31 @@
+<! DOCTYPE html>
+<html>
+    <head>
+        <title>Powerslide Django</title>
+        <meta charset='utf-8' />
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}"
+    </head>
+
+    <body>
+        <div>
+                <a class="header-title" href="/">Powerslide</a>
+            </div>
+            <div class="header-links">
+                <div class="header-element">
+                    <a class='header-link' href="#">About</a>
+                </div>
+                <div class="header-element">
+                    <a class='header-link' href="http://www.github.com/jump4r/Powerslide">Source</a>
+                </div>
+                <div class="header-element">
+                    <a class='header-link' href="{% url 'beatmaps:index' %}">Beatmaps</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

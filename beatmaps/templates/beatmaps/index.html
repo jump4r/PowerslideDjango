@@ -1,0 +1,13 @@
+{% if submission_list %}
+    <ul>
+        {% for s in submission_list %}
+            <li>
+                <a href="{% url 'beatmaps:detail' s.id %}">{{ s.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No beatmaps have been submitted</p>
+{% endif %}
+
+<a href="{% url 'beatmaps:submit' %}">Submit A Beatmap</a>

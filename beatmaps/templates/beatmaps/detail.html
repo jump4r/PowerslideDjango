@@ -1,0 +1,6 @@
+<h1>{{ submission }}</h1>
+<ul>
+    {% for beatmap in submission.beatmap_set.all %}
+        <li>{{ beatmap.difficulty }}</li>
+    {% endfor %}
+</ul>
